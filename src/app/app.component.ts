@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'recipe-app2';
+
+  userName1 : string = 'Kashh';
+  cityObtained : string;
+
+  getUserName(userName : string){
+    this.userName1 = userName;
+  }
+
+  getCityInAppComponent(cityFromChild : string)
+  {
+    this.cityObtained = cityFromChild;
+  }
 }
