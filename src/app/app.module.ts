@@ -32,7 +32,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     BrowserModule,
     FormsModule,
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService], // Moved from ShoppingListComponent as we need to be access it in RecipeService
   bootstrap: [AppComponent]
 })
 export class AppModule { }

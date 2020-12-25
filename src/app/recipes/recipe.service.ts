@@ -3,7 +3,7 @@ import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Recipe } from "./recipe.model";
 
-@Injectable()
+@Injectable() // Added Injectabe as we are injecting ShoppingListService in to this class
 export class RecipeService
 {
     recipeSelected = new EventEmitter<Recipe>();
