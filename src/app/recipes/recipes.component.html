@@ -3,9 +3,13 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail *ngIf="recipeDetailFromRecipesComponent; else noRecipeSelected " [recipeDetailFromRecipesComponent]="recipeDetailFromRecipesComponent"></app-recipe-detail>
+
+    <router-outlet></router-outlet>
+
+    <!-- Before adding Routing -->
+    <!--<app-recipe-detail *ngIf="recipeDetailFromRecipesComponent; else noRecipeSelected " [recipeDetailFromRecipesComponent]="recipeDetailFromRecipesComponent"></app-recipe-detail>
     <ng-template #noRecipeSelected>
       <p>Please choose a Recipe to view it's details!</p>
-    </ng-template>
+    </ng-template>-->
   </div>
 </div>

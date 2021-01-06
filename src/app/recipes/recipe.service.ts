@@ -16,7 +16,7 @@ export class RecipeService
           [new Ingredient('Bun',20),new Ingredient('Tomato',30),new Ingredient('Onion',20)]
         ),
         new Recipe(
-          1,
+          2,
           'Pizza', 
           'This is a Veg Pizza', 
           'assets/images/pizza.png',
@@ -34,5 +34,10 @@ export class RecipeService
     addIngredientsToShoppingList(ingredients : Ingredient[])
     {
       this.shoppingLisService.addIngredients(ingredients);
+    }
+
+    getRecipe(recipeId : number) : Recipe
+    {
+      return this.recipes[recipeId];
     }
 }
